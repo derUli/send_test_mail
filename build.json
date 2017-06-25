@@ -1,0 +1,8 @@
+{
+   "id" : "send_test_mail",
+   "version" : "1.0",
+   "description" : "Send test mail",
+   "categories" : ["email", "test", "mail"],
+   "compatible_from" : "2017.3.10",
+   "dependencies" : []
+}
