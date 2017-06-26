@@ -11,7 +11,7 @@ class TestMailSender {
 		if (StringHelper::isNotNullOrWhitespace ( $headers )) {
 			$this->headers = $headers;
 		} else {
-			$this->headers = "From: " . Settings::get ( "email" ) . "\r\n" . "Content-Type: text/plain; charset=UTF-8";
+			$this->headers = "From: " . Settings::get ( "email" ) . "\r\n". "Content-Type: text/plain; charset=UTF-8";
 		}
 	}
 	public function getTo() {
@@ -27,6 +27,8 @@ class TestMailSender {
 		$this->headers = StringHelper::isNotNullOrWhitespace ( $val ) ? $val : null;
 	}
 	public function send() {
-		Mailer::send ( $this->getTo (), get_translation ( "test_mail_subject" ), get_translation ( "test_mail_body" ), $this->getHeaders () );
+		Mailer::send ( $this->getTo (), get_translation ( "test_mail_subject" ), get_translation ( "test_mail_body", array (
+				"%domain%" => get_domain () 
+		) ), $this->getHeaders () );
 	}
 }
