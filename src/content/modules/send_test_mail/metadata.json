@@ -5,6 +5,9 @@
 	"controllers" : {
 		"SendTestMail" : "SendTestMail.php"
 	},
+	"objects" : {
+	"TestMailSender" : "objects/TestMailSender.php"
+	},
 	"main_class" : "SendTestMail",
 	"custom_acl" : ["send_test_mail"],
 	"admin_permission" : "send_test_mail"
