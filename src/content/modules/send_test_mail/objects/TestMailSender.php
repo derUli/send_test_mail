@@ -17,7 +17,7 @@ class TestMailSender {
 	public function getTo() {
 		return $this->to;
 	}
-	public function getHeader() {
+	public function getHeaders() {
 		return $this->headers;
 	}
 	public function setTo($val) {
@@ -27,6 +27,6 @@ class TestMailSender {
 		$this->headers = StringHelper::isNotNullOrWhitespace ( $val ) ? $val : null;
 	}
 	public function send() {
-		Mailer::send ( $this->getTo (), get_translation ( "test_mail_subject" ), get_translation ( "test_mail_body" ), $this->getHeader () );
+		Mailer::send ( $this->getTo (), get_translation ( "test_mail_subject" ), get_translation ( "test_mail_body" ), $this->getHeaders () );
 	}
 }
