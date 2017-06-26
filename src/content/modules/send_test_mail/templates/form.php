@@ -1,4 +1,4 @@
-<form id="myForm"
+<form id="mailTestForm"
 	action="<?php Template::escape( ModuleHelper::buildAdminURL("send_test_mail", "sClass=SendTestMail&sMethod=send"));?>"
 	method="post">
 	<p>
@@ -15,3 +15,15 @@
 
   <?php csrf_token_html();?>
 </form>
+<script type="text/javascript">
+$(function(){
+        $('#mailTestForm').ajaxForm(function() { 
+            alert(Translation.MAIL_SENT); 
+        });
+});
+</script>
+<?php
+$i18n = new JSTranslation ();
+$i18n->addKey ( "MAIL_SENT" );
+$i18n->renderJS ();
+?>

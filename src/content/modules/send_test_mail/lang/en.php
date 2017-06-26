@@ -5,3 +5,4 @@ define ( "TRANSLATION_TEST_MAIL_BODY", "Hello World\r\n" . "This is a test mail 
 define ( "TRANSLATION_SEND", "Send" );
 define ( "TRANSLATION_RECEIVER", "Receiver" );
 define ( "TRANSLATION_HEADERS", "Headers" );
+define ( "TRANSLATION_MAIL_SENT", "Mail sent." );
