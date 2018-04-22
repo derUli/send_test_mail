@@ -18,12 +18,12 @@
 <script type="text/javascript">
 $(function(){
         $('#mailTestForm').ajaxForm(function() { 
-            alert(Translation.MAIL_SENT); 
+            alert(Translation.MailSent); 
         });
 });
 </script>
 <?php
 $i18n = new JSTranslation ();
-$i18n->addKey ( "MAIL_SENT" );
+$i18n->addKey ( "mail_sent" );
 $i18n->renderJS ();
 ?>
