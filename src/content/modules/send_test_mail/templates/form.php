@@ -10,7 +10,7 @@
 			rows="15" name="headers"></textarea>
 	</p>
 	<p>
-		<input type="submit" name="" value="<?php translate("send");?>">
+		<button type="submit" class="btn btn-primary"><i class="fas fa-envelope"></i> <?php translate("send");?></button>
 	</p>
 
   <?php csrf_token_html();?>
@@ -18,7 +18,7 @@
 <script type="text/javascript">
 $(function(){
         $('#mailTestForm').ajaxForm(function() { 
-            alert(Translation.MailSent); 
+            bootbox.alert(Translation.MailSent); 
         });
 });
 </script>
